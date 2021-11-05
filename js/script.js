@@ -24,19 +24,26 @@ const chilometro = 0.21;
 let price = parseFloat(numberKM * chilometro).toFixed(2);
 console.log(price);
 
+//output HTML
+document.getElementById("totale").innerHTML = price;
+
 //sconto 20% minorenni
-let sconto20 = price * 20 / 100;
+let sconto20 = parseFloat(price * 20 / 100).toFixed(2);
 
 //sconto 40% over65
-let sconto40 = price * 40 / 100;
+let sconto40 = parseFloat(price * 40 / 100).toFixed(2);
 
 //condizioni per i minorenni e over65
 if (eta < 18) {
     let price18 = parseFloat(price - sconto20).toFixed(2);
     console.log(price18); 
+    document.getElementById("sconto-20").innerHTML = sconto20;
+    document.getElementById("totale-end").innerHTML = price18;
 } else if (eta >= 65) {
     let price65 = parseFloat(price - sconto40).toFixed(2);
     console.log(price65);
+    document.getElementById("sconto-40").innerHTML = sconto40;
+    document.getElementById("totale-end").innerHTML = price65;
 } else {
     console.log(price);
 }
