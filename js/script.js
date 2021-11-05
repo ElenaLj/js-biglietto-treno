@@ -9,7 +9,7 @@ Bonus: effettuate dei controlli sui dati di input
 ******** */
 
 //prompt nr. chilometri
-const numberKM = parseInt(prompt("Quanti chilometri devi percorrere?"));
+const numberKM = parseFloat(prompt("Quanti chilometri devi percorrere?")).toFixed(2);
 console.log(numberKM);
 
 //prompt età
@@ -21,7 +21,7 @@ const chilometro = 0.21;
 // console.log(chilometro);
 
 //prezzo finale in base ai KM
-let price = numberKM * chilometro;
+let price = parseFloat(numberKM * chilometro).toFixed(2);
 console.log(price);
 
 //sconto 20% minorenni
@@ -32,10 +32,10 @@ let sconto40 = price * 40 / 100;
 
 //condizioni per i minorenni e over65
 if (eta < 18) {
-    let price18 = price - sconto20;
+    let price18 = parseFloat(price - sconto20).toFixed(2);
     console.log(price18); 
 } else if (eta >= 65) {
-    let price65 = price - sconto40;
+    let price65 = parseFloat(price - sconto40).toFixed(2);
     console.log(price65);
 } else {
     console.log(price);
