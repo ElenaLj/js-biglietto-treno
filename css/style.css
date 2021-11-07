@@ -7,7 +7,35 @@
 }
 
 body {
-    background-color: lightcyan;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mohave', sans-serif;
+    background-color: #d3d6c4;
+}
+
+/* *** header *** */
+header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #839273;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+/* *** main *** */
+.container  {
+    margin: 50px auto;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #839273;
+    border-radius: 25px;
+    font-size: 1.5rem;
 }
